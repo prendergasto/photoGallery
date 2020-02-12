@@ -9,11 +9,11 @@ import './App.css';
 
 export default class App extends Component {
   render() {
-    return (
+     return (
       <div id="container">
         <Header />
         <ImageList images={images}/>
-      </div>
+    </div>
       
     )
   }
