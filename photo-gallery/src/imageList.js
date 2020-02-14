@@ -9,6 +9,17 @@ export default class ImageList extends Component {
     state = { selected: null };
 
     render() {
+        return (
+            <div id="list-container">
+                <ol>
+                    {this.props.images.map(image => <ImageItem data={image} />)}
+                </ol>
+            </div>
+        )
+    }
+    }
+
+
     //     const dataNode = images
     //     .filter(data => {
     //         if (!this.selected.state) return true;
@@ -18,19 +29,11 @@ export default class ImageList extends Component {
     //     .map((data) => <fart key={data.title} fart={data} />);
     //     const handleChange = e => {
     //   this.setState({ selected: e.target.value });
-        return (
-            <div id="list-container">
-                <ol>
-                    {this.props.images.map(image => <ImageItem data={image} />)}
-                </ol>
-            
-            { /* <select className="data-keyword-filter" onChange={handleChange}>
-                <option value="" defaultValue>
-                Keyword
-                </option>
-                {images.map(data => <option key={data.title}>{data.keyword}</option>)};
-            </select> */ }
-            </div>
-        )
-    }
-    }
+
+
+    /* <select className="data-keyword-filter" onChange={handleChange}>
+            <option value="" defaultValue>
+            Keyword
+            </option>
+            {images.map(data => <option key={data.title}>{data.keyword}</option>)};
+        </select> */ 
